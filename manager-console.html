@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0078)file:///C:/Users/HP/Documents/Codex/2026-11-20/im/outputs/manager-console.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0d14">
     <meta name="description" content="RestoFlow restaurant management portal for table reservations, orders, kitchen tickets, and billing.">
     <title>RestoFlow Manager Console</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./RestoFlow Manager Console_files/css2" rel="stylesheet">
     <style>
         :root {
             --bg-base: #0b0f19;
@@ -792,9 +791,9 @@
         </div>
         <div class="portal-toggle">
             <button id="btnSwitchUser" onclick="window.location.href='guest-portal.html'">Guest Portal</button>
-            <button id="btnManagerAccess" onclick="handleManagerAccess()">Manager Sign In</button>
-            <button id="btnSwitchManager" hidden onclick="switchPortal('manager')">Manager Console</button>
-            <button id="btnManagerLogout" class="btn btn-sm" hidden onclick="signOutManager()">Sign Out</button>
+            <button id="btnManagerAccess" onclick="handleManagerAccess()" hidden="">Manager Sign In</button>
+            <button id="btnSwitchManager" onclick="switchPortal('manager')" class="active">Manager Console</button>
+            <button id="btnManagerLogout" class="btn btn-sm" onclick="signOutManager()">Sign Out</button>
         </div>
     </header>
 
@@ -825,7 +824,51 @@
                 <div class="page-content">
                     <!-- Tab 1: Book Table -->
                     <section id="userTab-book" class="tab-content active">
-                        <div class="items-grid" id="userTablesContainer"></div>
+                        <div class="items-grid" id="userTablesContainer"><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 01</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Capacity: 4 Persons
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn" style="width: 100%;" onclick="openReserveModal(1)">Book Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 02</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Capacity: 2 Persons
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn" style="width: 100%;" onclick="openReserveModal(2)">Book Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 03</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Capacity: 6 Persons
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn" style="width: 100%;" onclick="openReserveModal(3)">Book Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 04</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Capacity: 4 Persons
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn" style="width: 100%;" onclick="openReserveModal(4)">Book Table</button>
+                    </div>
+                </div></div>
                     </section>
 
                     <!-- Tab 2: Menu & Ordering -->
@@ -840,7 +883,67 @@
                                 <option value="Beverages">Beverages</option>
                             </select>
                         </div>
-                        <div class="items-grid" id="userMenuContainer"></div>
+                        <div class="items-grid" id="userMenuContainer"><div class="card-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span class="diet-badge veg">VEG</span>
+                            <div style="font-weight: 600; margin-top: 6px;">Paneer Tikka Masala</div>
+                            <span style="font-size: 0.75rem; color: var(--text-dim);">Main Course</span>
+                        </div>
+                        <span style="font-weight: 700; color: #f9fafb;">₹280</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openOrderModal(101)">Order for Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span class="diet-badge veg">VEG</span>
+                            <div style="font-weight: 600; margin-top: 6px;">Butter Naan (2 pcs)</div>
+                            <span style="font-size: 0.75rem; color: var(--text-dim);">Main Course</span>
+                        </div>
+                        <span style="font-weight: 700; color: #f9fafb;">₹90</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openOrderModal(102)">Order for Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span class="diet-badge non-veg">NON-VEG</span>
+                            <div style="font-weight: 600; margin-top: 6px;">Crispy Chilli Chicken</div>
+                            <span style="font-size: 0.75rem; color: var(--text-dim);">Starters</span>
+                        </div>
+                        <span style="font-weight: 700; color: #f9fafb;">₹320</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openOrderModal(103)">Order for Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span class="diet-badge veg">VEG</span>
+                            <div style="font-weight: 600; margin-top: 6px;">Veg Hakka Noodles</div>
+                            <span style="font-size: 0.75rem; color: var(--text-dim);">Chinese</span>
+                        </div>
+                        <span style="font-weight: 700; color: #f9fafb;">₹190</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openOrderModal(104)">Order for Table</button>
+                    </div>
+                </div><div class="card-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <span class="diet-badge veg">VEG</span>
+                            <div style="font-weight: 600; margin-top: 6px;">Fresh Mint Mojito</div>
+                            <span style="font-size: 0.75rem; color: var(--text-dim);">Beverages</span>
+                        </div>
+                        <span style="font-weight: 700; color: #f9fafb;">₹120</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openOrderModal(105)">Order for Table</button>
+                    </div>
+                </div></div>
                     </section>
 
                     <!-- Tab 3: Active Orders -->
@@ -857,7 +960,7 @@
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                <tbody id="userOrdersTableBody"></tbody>
+                                <tbody id="userOrdersTableBody"><tr><td colspan="6" style="text-align: center; color: var(--text-dim); padding: 20px;">No active orders.</td></tr></tbody>
                             </table>
                         </div>
                     </section>
@@ -868,14 +971,15 @@
         <!-- ========================================== -->
         <!-- MANAGER PORTAL -->
         <!-- ========================================== -->
-        <div id="portalManager" class="portal-panel">
+        <div id="portalManager" class="portal-panel active">
             <aside>
                 <nav>
                     <ul class="sidebar-nav">
                         <li><button class="active" onclick="switchManagerTab('floor', this)">Floor Plan</button></li>
-                        <li><button onclick="switchManagerTab('kitchen', this)">Kitchen Orders</button></li>
-                        <li><button onclick="switchManagerTab('billing', this)">Billing &amp; Settle</button></li>
-                        <li><button onclick="switchManagerTab('menu', this)">Menu Settings</button></li>
+                        <li><button onclick="switchManagerTab('kitchen', this)" class="">Kitchen Orders</button></li>
+                        <li><button onclick="switchManagerTab('billing', this)" class="">Billing &amp; Settle</button></li>
+                        <li><button onclick="switchManagerTab('menu', this)" class="">Menu Settings</button></li>
+                        <li><button onclick="switchManagerTab('staff', this)" class="">Staff Access</button></li>
                     </ul>
                 </nav>
                 <div class="sidebar-footer">
@@ -886,7 +990,7 @@
             <main>
                 <div class="view-header">
                     <h2 id="managerHeaderTitle">Floor Plan &amp; Tables</h2>
-                    <span id="liveClock" style="font-size: 0.85rem; color: var(--text-muted);">--:--:--</span>
+                    <span id="liveClock" style="font-size: 0.85rem; color: var(--text-muted);">01:07:53 PM</span>
                 </div>
 
                 <div class="page-content">
@@ -895,7 +999,7 @@
                         <div class="metrics-bar">
                             <div class="metric-card">
                                 <span>Total Tables</span>
-                                <div class="metric-val" id="metricTotal">0</div>
+                                <div class="metric-val" id="metricTotal">4</div>
                             </div>
                             <div class="metric-card">
                                 <span>Occupied</span>
@@ -907,7 +1011,7 @@
                             </div>
                             <div class="metric-card">
                                 <span>Available</span>
-                                <div class="metric-val" id="metricAvailable" style="color: var(--success);">0</div>
+                                <div class="metric-val" id="metricAvailable" style="color: var(--success);">4</div>
                             </div>
                         </div>
 
@@ -915,7 +1019,47 @@
                             <h3 style="font-size: 1rem; font-weight: 600;">Floor Layout</h3>
                             <button class="btn btn-sm" onclick="openModal('addTableModal')">+ Add Table</button>
                         </div>
-                        <div class="items-grid" id="managerTablesContainer"></div>
+                        <div class="items-grid" id="managerTablesContainer"><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 01</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">Capacity: <b>4 Seats</b></div>
+                    <div style="display: flex; gap: 6px; margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-sm" onclick="seatWalkIn(1)">Seat</button>
+                        <button class="btn btn-outline btn-sm" onclick="openReserveModal(1)">Hold</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 02</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">Capacity: <b>2 Seats</b></div>
+                    <div style="display: flex; gap: 6px; margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-sm" onclick="seatWalkIn(2)">Seat</button>
+                        <button class="btn btn-outline btn-sm" onclick="openReserveModal(2)">Hold</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 03</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">Capacity: <b>6 Seats</b></div>
+                    <div style="display: flex; gap: 6px; margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-sm" onclick="seatWalkIn(3)">Seat</button>
+                        <button class="btn btn-outline btn-sm" onclick="openReserveModal(3)">Hold</button>
+                    </div>
+                </div><div class="card-item">
+                    <div class="card-header">
+                        <b>Table 04</b>
+                        <span class="status-badge available">available</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">Capacity: <b>4 Seats</b></div>
+                    <div style="display: flex; gap: 6px; margin-top: auto; padding-top: 8px;">
+                        <button class="btn btn-sm" onclick="seatWalkIn(4)">Seat</button>
+                        <button class="btn btn-outline btn-sm" onclick="openReserveModal(4)">Hold</button>
+                    </div>
+                </div></div>
                     </section>
 
                     <!-- Tab 2: Kitchen Display -->
@@ -932,7 +1076,7 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody id="managerKitchenTableBody"></tbody>
+                                <tbody id="managerKitchenTableBody"><tr><td colspan="6" style="text-align: center; color: var(--text-dim); padding: 20px;">No pending kitchen orders.</td></tr></tbody>
                             </table>
                         </div>
                     </section>
@@ -952,7 +1096,7 @@
                                         <th>Settlement</th>
                                     </tr>
                                 </thead>
-                                <tbody id="managerBillingTableBody"></tbody>
+                                <tbody id="managerBillingTableBody"><tr><td colspan="7" style="text-align: center; color: var(--text-dim); padding: 20px;">No tables with active bills.</td></tr></tbody>
                                 <tfoot>
                                     <tr>
                                         <td colspan="5" style="text-align: right; color: var(--text-muted);">Unsettled Balance:</td>
@@ -981,8 +1125,84 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody id="managerMenuTableBody"></tbody>
+                                <tbody id="managerMenuTableBody"><tr>
+                    <td>#101</td>
+                    <td><b>Paneer Tikka Masala</b></td>
+                    <td><span class="diet-badge veg">VEG</span></td>
+                    <td>Main Course</td>
+                    <td>₹280</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="deleteDish(101)">Delete</button></td>
+                </tr><tr>
+                    <td>#102</td>
+                    <td><b>Butter Naan (2 pcs)</b></td>
+                    <td><span class="diet-badge veg">VEG</span></td>
+                    <td>Main Course</td>
+                    <td>₹90</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="deleteDish(102)">Delete</button></td>
+                </tr><tr>
+                    <td>#103</td>
+                    <td><b>Crispy Chilli Chicken</b></td>
+                    <td><span class="diet-badge non-veg">NON-VEG</span></td>
+                    <td>Starters</td>
+                    <td>₹320</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="deleteDish(103)">Delete</button></td>
+                </tr><tr>
+                    <td>#104</td>
+                    <td><b>Veg Hakka Noodles</b></td>
+                    <td><span class="diet-badge veg">VEG</span></td>
+                    <td>Chinese</td>
+                    <td>₹190</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="deleteDish(104)">Delete</button></td>
+                </tr><tr>
+                    <td>#105</td>
+                    <td><b>Fresh Mint Mojito</b></td>
+                    <td><span class="diet-badge veg">VEG</span></td>
+                    <td>Beverages</td>
+                    <td>₹120</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="deleteDish(105)">Delete</button></td>
+                </tr></tbody>
                             </table>
+                        </div>
+                    </section>
+
+                    <!-- Tab 5: Manager Accounts -->
+                    <section id="managerTab-staff" class="tab-content">
+                        <div style="display: grid; grid-template-columns: minmax(260px, 360px) minmax(0, 1fr); gap: 20px; align-items: start;">
+                            <form onsubmit="handleAddManagerSubmit(event)" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+                                <div>
+                                    <h3 style="font-size: 1rem; font-weight: 600;">Add manager</h3>
+                                    <p style="margin-top: 4px; color: var(--text-muted); font-size: .8rem;">Create credentials for a new manager.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newManagerName">Full name</label>
+                                    <input type="text" id="newManagerName" placeholder="e.g. Priya Singh" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newManagerId">Manager ID</label>
+                                    <input type="text" id="newManagerId" placeholder="e.g. 124" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newManagerPassword">Temporary password</label>
+                                    <input type="password" id="newManagerPassword" minlength="3" placeholder="At least 3 characters" required="">
+                                </div>
+                                <button type="submit" class="btn">Add manager</button>
+                            </form>
+                            <div class="table-wrap" style="margin-bottom: 0;">
+                                <table class="records-table">
+                                    <thead>
+                                        <tr><th>Name</th><th>Manager ID</th><th>Access</th></tr>
+                                    </thead>
+                                    <tbody id="managerAccountsTableBody"><tr>
+                    <td><b>Primary Manager</b></td>
+                    <td>123</td>
+                    <td><span class="status-badge available">Active</span></td>
+                </tr><tr>
+                    <td><b>shivam</b></td>
+                    <td>1234</td>
+                    <td><span class="status-badge available">Active</span></td>
+                </tr></tbody>
+                                </table>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -1003,17 +1223,81 @@
                     <legend>Manager credentials</legend>
                     <div class="form-group">
                         <label for="managerId">Manager ID</label>
-                        <input type="text" id="managerId" autocomplete="username" inputmode="numeric" required>
+                        <input type="text" id="managerId" autocomplete="username" inputmode="numeric" required="">
                     </div>
                     <div class="form-group">
                         <label for="managerPassword">Password</label>
-                        <input type="password" id="managerPassword" autocomplete="current-password" required>
+                        <input type="password" id="managerPassword" autocomplete="current-password" required="">
                     </div>
                     <p class="login-error" id="managerLoginError" role="alert">The ID or password is incorrect.</p>
                 </fieldset>
                 <div style="display: flex; gap: 8px; justify-content: flex-end;">
                     <button type="button" class="btn btn-outline" onclick="window.location.href='guest-portal.html'">Back to guest portal</button>
                     <button type="submit" class="btn">Sign in</button>
+                </div>
+                <div style="display: flex; justify-content: space-between; gap: 12px; margin-top: 2px; font-size: .78rem;">
+                    <button type="button" class="btn btn-outline btn-sm" onclick="openManagerRegistration()">Add new user</button>
+                    <button type="button" class="btn btn-outline btn-sm" onclick="openPasswordReset()">Forgot password?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create manager account -->
+    <div class="modal-overlay manager-access-dialog" id="managerRegistrationModal" role="dialog" aria-modal="true" aria-labelledby="managerRegistrationTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="managerRegistrationTitle">Add new manager</h3>
+                <p>Create credentials for another manager account.</p>
+            </div>
+            <form onsubmit="handleManagerRegistration(event)">
+                <fieldset>
+                    <legend>New manager details</legend>
+                    <div class="form-group">
+                        <label for="registrationManagerName">Full name</label>
+                        <input type="text" id="registrationManagerName" placeholder="e.g. Priya Singh" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="registrationManagerId">Manager ID</label>
+                        <input type="text" id="registrationManagerId" placeholder="e.g. 124" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="registrationManagerPassword">Password</label>
+                        <input type="password" id="registrationManagerPassword" minlength="3" required="">
+                    </div>
+                    <p class="login-error visible" id="managerRegistrationError" role="alert">That Manager ID is already in use.</p>
+                </fieldset>
+                <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-outline" onclick="returnToManagerLogin('managerRegistrationModal')">Back</button>
+                    <button type="submit" class="btn">Create account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reset manager password -->
+    <div class="modal-overlay manager-access-dialog" id="managerResetModal" role="dialog" aria-modal="true" aria-labelledby="managerResetTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="managerResetTitle">Reset password</h3>
+                <p>Enter your Manager ID and choose a new password.</p>
+            </div>
+            <form onsubmit="handlePasswordReset(event)">
+                <fieldset>
+                    <legend>Password reset</legend>
+                    <div class="form-group">
+                        <label for="resetManagerId">Manager ID</label>
+                        <input type="text" id="resetManagerId" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="resetManagerPassword">New password</label>
+                        <input type="password" id="resetManagerPassword" minlength="3" required="">
+                    </div>
+                    <p class="login-error" id="managerResetError" role="alert"></p>
+                </fieldset>
+                <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-outline" onclick="returnToManagerLogin('managerResetModal')">Back</button>
+                    <button type="submit" class="btn">Update password</button>
                 </div>
             </form>
         </div>
@@ -1032,16 +1316,16 @@
                     <legend>Guest Information</legend>
                     <div class="form-group">
                         <label for="resName">Full Name</label>
-                        <input type="text" id="resName" placeholder="e.g. Rahul Sharma" required pattern="[A-Za-z ]{3,}" title="Minimum 3 characters, letters only.">
+                        <input type="text" id="resName" placeholder="e.g. Rahul Sharma" required="" pattern="[A-Za-z ]{3,}" title="Minimum 3 characters, letters only.">
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="resDate">Date</label>
-                            <input type="date" id="resDate" required>
+                            <input type="date" id="resDate" required="">
                         </div>
                         <div class="form-group">
                             <label for="resTime">Time Slot</label>
-                            <input type="time" id="resTime" required>
+                            <input type="time" id="resTime" required="">
                         </div>
                     </div>
                 </fieldset>
@@ -1065,11 +1349,11 @@
                     <legend>Order Details</legend>
                     <div class="form-group">
                         <label for="orderTableTarget">Seated Table</label>
-                        <select id="orderTableTarget" required></select>
+                        <select id="orderTableTarget" required=""></select>
                     </div>
                     <div class="form-group">
                         <label for="orderPortions">Portions</label>
-                        <input type="number" id="orderPortions" min="1" max="15" value="1" required oninput="calculateOrderPreview()">
+                        <input type="number" id="orderPortions" min="1" max="15" value="1" required="" oninput="calculateOrderPreview()">
                     </div>
                     <div style="background-color: var(--bg-base); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between;">
                         <span>Estimated Total (incl. 5% GST):</span>
@@ -1096,11 +1380,11 @@
                     <legend>Table Configuration</legend>
                     <div class="form-group">
                         <label for="tableNameInput">Table Identifier</label>
-                        <input type="text" id="tableNameInput" placeholder="e.g. Table 05" required>
+                        <input type="text" id="tableNameInput" placeholder="e.g. Table 05" required="">
                     </div>
                     <div class="form-group">
                         <label for="tableCapInput">Capacity (Seats)</label>
-                        <input type="number" id="tableCapInput" min="1" max="16" value="4" required>
+                        <input type="number" id="tableCapInput" min="1" max="16" value="4" required="">
                     </div>
                 </fieldset>
                 <div style="display: flex; gap: 8px; justify-content: flex-end;">
@@ -1123,12 +1407,12 @@
                     <legend>Dish Specs</legend>
                     <div class="form-group">
                         <label for="dishNameInput">Dish Name</label>
-                        <input type="text" id="dishNameInput" placeholder="e.g. Paneer Butter Masala" required>
+                        <input type="text" id="dishNameInput" placeholder="e.g. Paneer Butter Masala" required="">
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="dishCategoryInput">Category</label>
-                            <select id="dishCategoryInput" required>
+                            <select id="dishCategoryInput" required="">
                                 <option value="Starters">Starters</option>
                                 <option value="Main Course">Main Course</option>
                                 <option value="Chinese">Chinese</option>
@@ -1137,12 +1421,12 @@
                         </div>
                         <div class="form-group">
                             <label for="dishPriceInput">Price (₹)</label>
-                            <input type="number" id="dishPriceInput" min="10" placeholder="240" required>
+                            <input type="number" id="dishPriceInput" min="10" placeholder="240" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="dishDietInput">Classification</label>
-                        <select id="dishDietInput" required>
+                        <select id="dishDietInput" required="">
                             <option value="veg">Vegetarian (Veg)</option>
                             <option value="non-veg">Non-Vegetarian</option>
                         </select>
@@ -1161,6 +1445,7 @@
     <script>
         const STORE_KEY_TABLES = 'restoflow_tables_v4';
         const STORE_KEY_MENU = 'restoflow_menu_v4';
+        const STORE_KEY_MANAGERS = 'restoflow_manager_accounts_v1';
         const PORTAL_PAGE = 'manager';
         const MANAGER_ID = '123';
         const MANAGER_PASSWORD = '456';
@@ -1181,6 +1466,10 @@
             { id: 105, name: "Fresh Mint Mojito", category: "Beverages", price: 120, diet: "veg" }
         ];
 
+        const defaultManagers = [
+            { name: 'Primary Manager', id: '123', password: '456' }
+        ];
+
         function loadStore(key, fallback) {
             const data = localStorage.getItem(key);
             return data ? JSON.parse(data) : fallback;
@@ -1193,6 +1482,7 @@
 
         let tables = loadStore(STORE_KEY_TABLES, defaultTables);
         let menu = loadStore(STORE_KEY_MENU, defaultMenu);
+        let managers = loadStore(STORE_KEY_MANAGERS, defaultManagers);
         let activeHoldTableId = null;
         let activeOrderDish = null;
 
@@ -1214,13 +1504,86 @@
             setTimeout(() => document.getElementById('managerId').focus(), 0);
         }
 
+        function openManagerRegistration() {
+            closeModal('managerLoginModal');
+            const error = document.getElementById('managerRegistrationError');
+            error.textContent = '';
+            error.classList.remove('visible');
+            openModal('managerRegistrationModal');
+            setTimeout(() => document.getElementById('registrationManagerName').focus(), 0);
+        }
+
+        function openPasswordReset() {
+            closeModal('managerLoginModal');
+            const error = document.getElementById('managerResetError');
+            error.textContent = '';
+            error.classList.remove('visible');
+            openModal('managerResetModal');
+            setTimeout(() => document.getElementById('resetManagerId').focus(), 0);
+        }
+
+        function returnToManagerLogin(modalId) {
+            closeModal(modalId);
+            openModal('managerLoginModal');
+            setTimeout(() => document.getElementById('managerId').focus(), 0);
+        }
+
+        function handleManagerRegistration(event) {
+            event.preventDefault();
+            const name = document.getElementById('registrationManagerName').value.trim();
+            const id = document.getElementById('registrationManagerId').value.trim();
+            const password = document.getElementById('registrationManagerPassword').value;
+            const error = document.getElementById('managerRegistrationError');
+
+            if (managers.some(manager => manager.id === id)) {
+                error.textContent = 'That Manager ID is already in use.';
+                error.classList.add('visible');
+                document.getElementById('registrationManagerId').focus();
+                return;
+            }
+
+            managers.push({ name, id, password });
+            saveStore(STORE_KEY_MANAGERS, managers);
+            event.target.reset();
+            closeModal('managerRegistrationModal');
+            document.getElementById('managerId').value = id;
+            openModal('managerLoginModal');
+            document.getElementById('managerPassword').focus();
+            showToast('Manager account created. Please sign in.');
+        }
+
+        function handlePasswordReset(event) {
+            event.preventDefault();
+            const id = document.getElementById('resetManagerId').value.trim();
+            const password = document.getElementById('resetManagerPassword').value;
+            const error = document.getElementById('managerResetError');
+            const manager = managers.find(account => account.id === id);
+
+            if (!manager) {
+                error.textContent = 'No manager account exists with that ID.';
+                error.classList.add('visible');
+                document.getElementById('resetManagerId').focus();
+                return;
+            }
+
+            manager.password = password;
+            saveStore(STORE_KEY_MANAGERS, managers);
+            event.target.reset();
+            closeModal('managerResetModal');
+            document.getElementById('managerId').value = id;
+            openModal('managerLoginModal');
+            document.getElementById('managerPassword').focus();
+            showToast('Password updated. Please sign in.');
+        }
+
         function handleManagerLogin(event) {
             event.preventDefault();
             const id = document.getElementById('managerId').value.trim();
             const password = document.getElementById('managerPassword').value;
             const error = document.getElementById('managerLoginError');
 
-            if (id !== MANAGER_ID || password !== MANAGER_PASSWORD) {
+            const manager = managers.find(account => account.id === id && account.password === password);
+            if (!manager) {
                 error.classList.add('visible');
                 document.getElementById('managerPassword').focus();
                 return;
@@ -1279,7 +1642,7 @@
             document.getElementById(`managerTab-${tabKey}`).classList.add('active');
             btn.classList.add('active');
 
-            const labels = { floor: "Floor Plan & Tables", kitchen: "Kitchen Order Tickets", billing: "Billing & Settle", menu: "Menu Settings" };
+            const labels = { floor: "Floor Plan & Tables", kitchen: "Kitchen Order Tickets", billing: "Billing & Settle", menu: "Menu Settings", staff: "Staff Access" };
             document.getElementById('managerHeaderTitle').innerText = labels[tabKey];
         }
 
@@ -1302,6 +1665,7 @@
             renderManagerKitchen();
             renderManagerBilling();
             renderManagerMenu();
+            renderManagerAccounts();
             renderUserTables();
             renderUserMenu();
             renderUserOrders();
@@ -1430,6 +1794,21 @@
                     <td>${item.category}</td>
                     <td>₹${item.price}</td>
                     <td><button class="btn btn-danger btn-sm" onclick="deleteDish(${item.id})">Delete</button></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderManagerAccounts() {
+            const tbody = document.getElementById('managerAccountsTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            managers.forEach(manager => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${manager.name}</b></td>
+                    <td>${manager.id}</td>
+                    <td><span class="status-badge available">Active</span></td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -1687,6 +2066,24 @@
             showToast(`Added ${name}`);
         }
 
+        function handleAddManagerSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('newManagerName').value.trim();
+            const id = document.getElementById('newManagerId').value.trim();
+            const password = document.getElementById('newManagerPassword').value;
+
+            if (managers.some(manager => manager.id === id)) {
+                showToast('That Manager ID is already in use');
+                document.getElementById('newManagerId').focus();
+                return;
+            }
+
+            managers.push({ name, id, password });
+            saveStore(STORE_KEY_MANAGERS, managers);
+            e.target.reset();
+            showToast(`${name} was added as a manager`);
+        }
+
         function deleteDish(id) {
             if (confirm("Remove dish from menu?")) {
                 menu = menu.filter(m => m.id !== id);
@@ -1705,5 +2102,6 @@
             handleManagerAccess();
         }
     </script>
-</body>
-</html>
+
+
+</body></html>
